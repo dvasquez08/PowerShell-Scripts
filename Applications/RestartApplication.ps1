@@ -8,7 +8,8 @@ if ($runningProcesses) {
     # Close all processes associated with the application
     $runningProcesses | ForEach-Object { Stop-Process -Id $_.Id -Force }
     Write-Host "Application '$exeName' closed."
-} else {
+}
+else {
     Write-Host "Application '$exeName' is not running."
 }
 
@@ -23,6 +24,7 @@ if (Test-Path $notepadFilePath) {
     $timeStamp = Get-Date -Format "yyyy-MM-dd HH:mm:ss"
     "Caffeine started successfully at $timeStamp" | Out-File -FilePath $notepadFilePath -Append
     Write-Host "Successfully wrote to Notepad file."
-} else {
+}
+else {
     Write-Host "Notepad file not found at '$notepadFilePath'."
 }
