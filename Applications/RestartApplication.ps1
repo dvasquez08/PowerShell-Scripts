@@ -20,9 +20,10 @@ Write-Host "Application '$exeName' started."
 #Enter the path of a notepad file here, this will be used for logging
 $notepadFilePath = "NOTEPAD_LOCATION"
 
+#Replace APPLICATION_NAME with the name of the application you are restarting
 if (Test-Path $notepadFilePath) {
     $timeStamp = Get-Date -Format "yyyy-MM-dd HH:mm:ss"
-    "Caffeine started successfully at $timeStamp" | Out-File -FilePath $notepadFilePath -Append
+    "APPLICATION_NAME started successfully at $timeStamp" | Out-File -FilePath $notepadFilePath -Append
     Write-Host "Successfully wrote to Notepad file."
 }
 else {
