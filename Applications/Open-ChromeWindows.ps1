@@ -1,4 +1,8 @@
+#Define the path of chrome.exe
+
 $chromePath = "C:\Program Files\Google\Chrome\Application\chrome.exe"
+
+#Define the URLs of each tab for each Chrome window
 
 $window1Urls = @(
     "https://github.com"
@@ -15,6 +19,8 @@ $window3Urls = @(
     "https://stackoverflow.com"
     "https://youtube.com"
 )
+
+#Open each Chrome window, each with its own series of tabs
 
 $arguments1 = @("--new-window") + $window1Urls
 Start-Process $chromePath -ArgumentList $arguments1
